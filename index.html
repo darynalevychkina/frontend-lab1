@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<title>Creating a web project to learn HTML, CSS, JavaScript</title>
+<link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+
+<header>
+  <h1>Creating a web project to learn HTML, CSS, JavaScript</h1>
+  <p>12 sections with examples</p>
+  <nav>
+    <a href="#s1">1 Text Tags</a>
+    <a href="#s2">2 Lists</a>
+    <a href="#s3">3 Links &amp; Images</a>
+    <a href="#s4">4 Tables</a>
+    <a href="#s5">5 Forms</a>
+    <a href="#s6">6 Box Model</a>
+    <a href="#s7">7 Typography</a>
+    <a href="#s8">8 Colors</a>
+    <a href="#s9">9 Flexbox</a>
+    <a href="#s10">10 Pseudo-classes</a>
+    <a href="#s11">11 DOM</a>
+    <a href="#s12">12 Events</a>
+  </nav>
+</header>
+
+<main>
+
+<section id="s1" class="html-s">
+  <h2>1. Text Tags</h2>
+  <p class="desc">Tags like <code>h1–h3</code>, <code>p</code>, <code>strong</code>, <code>em</code> and <code>br</code> structure and format text content on a page.</p>
+  <pre><code>&lt;h1&gt;Heading 1&lt;/h1&gt;
+&lt;p&gt;Normal &lt;strong&gt;bold&lt;/strong&gt; and &lt;em&gt;italic&lt;/em&gt; text.&lt;/p&gt;
+&lt;br&gt;
+&lt;p&gt;New line after br.&lt;/p&gt;</code></pre>
+  <div class="demo">
+    <h1>Heading 1</h1>
+    <h2>Heading 2</h2>
+    <h3>Heading 3</h3>
+    <p>Normal <strong>bold</strong> and <em>italic</em> text.</p>
+    <br>
+    <p>New line after br.</p>
+  </div>
+</section>
+
+<section id="s2" class="html-s">
+  <h2>2. Lists</h2>
+  <p class="desc"><code>ul</code> creates an unordered (bulleted) list. <code>ol</code> creates an ordered (numbered) list. Each item uses <code>li</code>.</p>
+  <pre><code>&lt;ul&gt;&lt;li&gt;HTML&lt;/li&gt;&lt;li&gt;CSS&lt;/li&gt;&lt;/ul&gt;
+&lt;ol&gt;&lt;li&gt;Write HTML&lt;/li&gt;&lt;li&gt;Add CSS&lt;/li&gt;&lt;/ol&gt;</code></pre>
+  <div class="demo lists-demo">
+    <div>
+      <strong>Unordered:</strong>
+      <ul><li>HTML</li><li>CSS</li><li>JavaScript</li></ul>
+    </div>
+    <div>
+      <strong>Ordered:</strong>
+      <ol><li>HTML</li><li>CSS</li><li>JS</li></ol>
+    </div>
+  </div>
+</section>
+
+<section id="s3" class="html-s">
+  <h2>3. Links &amp; Images</h2>
+  <p class="desc"><code>&lt;a href="" target="_blank"&gt;</code> opens a link in a new tab. <code>&lt;img src="" alt=""&gt;</code> embeds an image — <code>alt</code> is required for accessibility.</p>
+  <pre><code>&lt;a href="https://mdn.io" target="_blank"&gt;MDN Docs&lt;/a&gt;
+&lt;img src="photo.jpg" alt="Description"&gt;</code></pre>
+  <div class="demo">
+    <p><a href="https://developer.mozilla.org/en-US/" target="_blank">↗ Open MDN Docs</a></p>
+    <img src="https://miro.medium.com/1*GB9gafmsdV-6YdRB03BMpg.png" alt="placeholder image" class="demo-img">
+  </div>
+</section>
+
+<section id="s4" class="html-s">
+  <h2>4. Tables</h2>
+  <p class="desc"><code>table</code> wraps the whole table. <code>tr</code> is a row, <code>th</code> is a header cell, <code>td</code> is a data cell.</p>
+  <pre><code>&lt;table&gt;
+  &lt;tr&gt;&lt;th&gt;Language&lt;/th&gt;&lt;th&gt;Role&lt;/th&gt;&lt;/tr&gt;
+  &lt;tr&gt;&lt;td&gt;HTML&lt;/td&gt;&lt;td&gt;Structure&lt;/td&gt;&lt;/tr&gt;
+&lt;/table&gt;</code></pre>
+  <div class="demo">
+    <table>
+      <tr><th>Language</th><th>Role</th><th>Example</th></tr>
+      <tr><td>HTML</td><td>Structure</td><td><code>&lt;div&gt;</code></td></tr>
+      <tr><td>CSS</td><td>Styling</td><td><code>color:</code></td></tr>
+      <tr><td>JavaScript</td><td>Behaviour</td><td><code>addEventListener()</code></td></tr>
+    </table>
+  </div>
+</section>
+
+<section id="s5" class="html-s">
+  <h2>5. Forms</h2>
+  <p class="desc"><code>form</code> groups inputs. <code>label</code> describes a field. <code>input</code> collects user data. <code>button</code> submits the form.</p>
+  <pre><code>&lt;form&gt;
+  &lt;label for="name"&gt;Name:&lt;/label&gt;
+  &lt;input type="text" id="name"&gt;
+  &lt;label for="email"&gt;Email:&lt;/label&gt;
+  &lt;input type="email" id="email"&gt;
+  &lt;button&gt;Submit&lt;/button&gt;
+&lt;/form&gt;</code></pre>
+  <div class="demo">
+    <form onsubmit="return false">
+      <label for="fn">Name:</label>
+      <input type="text" id="fn" placeholder="Your name">
+      <label for="fe">Email:</label>
+      <input type="email" id="fe" placeholder="you@gmail.com">
+      <button class="btn" type="submit">Submit</button>
+    </form>
+  </div>
+</section>
+
+<section id="s6" class="css-s">
+  <h2>6. Box Model</h2>
+  <p class="desc"><code>margin</code> is the outer gap between elements. <code>padding</code> is the inner gap between content and border. <code>border</code> is the visible frame around the element.</p>
+  <pre><code>.box { margin: 20px; padding: 16px; border: 3px solid #1a6fff; }</code></pre>
+  <div class="demo">
+    <div class="bm-wrap">
+      <div class="bm-margin">margin
+        <div class="bm-border">border
+          <div class="bm-padding">padding
+            <div class="bm-content">content</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="s7" class="css-s">
+  <h2>7. Typography</h2>
+  <p class="desc"><code>font-size</code> sets text size. <code>font-weight</code> controls thickness. <code>line-height</code> sets spacing between lines for better readability.</p>
+  <pre><code>.small { font-size:12px; font-weight:400; line-height:1.2 }
+.large { font-size:28px; font-weight:700; line-height:1.8 }</code></pre>
+  <div class="demo">
+    <p class="t-sm">Small — 12px · weight 400 · line-height 1.2</p>
+    <p class="t-md">Medium — 18px · weight 600 · line-height 1.5</p>
+    <p class="t-lg">Large — 28px · 700</p>
+  </div>
+</section>
+
+<section id="s8" class="css-s">
+  <h2>8. Colors &amp; Background</h2>
+  <p class="desc"><code>color</code> sets text colour. <code>background-color</code> fills the element. <code>linear-gradient()</code> creates smooth colour transitions.</p>
+  <pre><code>.dark-box { color:#fff; background-color:#0a0c10 }
+.grad     { background: linear-gradient(130deg,#1a6fff,#0a0c10) }</code></pre>
+  <div class="demo">
+    <div class="cd1">color: #fff · background-color: #0a0c10</div>
+    <div class="cd2">linear-gradient(130deg, #1a6fff → #0a0c10)</div>
+  </div>
+</section>
+
+<section id="s9" class="css-s">
+  <h2>9. Layout — Flexbox</h2>
+  <p class="desc"><code>display:flex</code> enables Flexbox. <code>gap</code> adds space between items. <code>justify-content</code> aligns on the main axis; <code>align-items</code> on the cross axis.</p>
+  <pre><code>.flex { display:flex; gap:10px; justify-content:center; align-items:center }</code></pre>
+  <div class="demo">
+    <div class="fbox">
+      <div class="fi">Block 1</div>
+      <div class="fi">Block 2</div>
+      <div class="fi">Block 3</div>
+      <div class="fi">Block 4</div>
+    </div>
+  </div>
+</section>
+
+<section id="s10" class="css-s">
+  <h2>10. Pseudo-classes</h2>
+  <p class="desc"><code>:hover</code> applies styles when the mouse is over an element. <code>:focus</code> triggers when an input or button receives focus.</p>
+  <pre><code>.btn:hover  { background:#0d4fcc; transform:scale(1.04) }
+input:focus { border-color:#1a6fff; background:#f0f5ff }</code></pre>
+  <div class="demo">
+    <p style="margin-bottom:10px">Hover the button or click the input:</p>
+    <button class="btn">Hover me</button>
+    <input class="focus-demo" type="text" placeholder="Click">
+  </div>
+</section>
+
+<section id="s11" class="js-s">
+  <h2>11. DOM Manipulation</h2>
+  <p class="desc"><code>createElement()</code> creates a new element in memory. <code>appendChild()</code> inserts it into the page — no reload needed.</p>
+  <pre><code>addBtn.addEventListener('click', () => {
+  const p = document.createElement('p');
+  p.textContent = 'Item #' + (++n);
+  container.appendChild(p);
+});</code></pre>
+  <div class="demo">
+    <button class="btn" id="addBtn">+ Add item</button>
+    <button class="btn btn-ghost" id="clearBtn">✕ Clear</button>
+    <div id="out"></div>
+  </div>
+</section>
+
+<section id="s12" class="js-s">
+  <h2>12. Events &amp; Style Toggle</h2>
+  <p class="desc"><code>classList.toggle()</code> adds a class if missing, removes it if present. Combined with CSS variables it switches the entire page theme.</p>
+  <pre><code>themeBtn.addEventListener('click', () => {
+  document.body.classList.toggle('dark');
+});</code></pre>
+  <div class="demo">
+    <button class="btn" id="themeBtn">Dark theme</button>
+    <p id="theme-status">Current theme: <strong>Light</strong></p>
+  </div>
+</section>
+
+</main>
+
+<script src="script.js"></script>
+</body>
+</html>
